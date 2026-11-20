@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三人聚智 · 视频倍速</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <header>
+    <div class="brand-mark" aria-hidden="true">»</div>
+    <div class="brand"><h1>视频倍速</h1><span>三人聚智 · SANRENJZ</span></div>
+    <label class="toggle"><input id="enabled" type="checkbox" role="switch" aria-label="启用视频倍速"><span></span></label>
+  </header>
+  <nav class="brand-links" aria-label="三人聚智资源">
+    <a class="docs-link" href="https://docs.sanrenjz.com" target="_blank" rel="noopener noreferrer">文档与教程 <span>docs.sanrenjz.com ↗</span></a>
+    <a class="github-link" href="https://github.com/yuhanbo758" target="_blank" rel="noopener noreferrer">GitHub <span>yuhanbo758 ↗</span></a>
+  </nav>
+  <main>
+    <section class="current">
+      <div class="eyebrow">当前站点 <span id="source" class="tag">跟随全局</span></div>
+      <p id="host" class="host">正在读取…</p>
+      <div class="speed-display"><strong id="current-speed">1</strong><span>×</span></div>
+      <p id="site-help" class="hint">选择倍速，自动记住此站点</p>
+      <div id="presets" class="presets" aria-label="站点常用倍速"></div>
+      <form id="site-form" class="input-row">
+        <label class="sr-only" for="site-speed">当前站点自定义倍速</label>
+        <div class="number-wrap"><input id="site-speed" type="number" min="0.25" max="4" step="0.01" value="1" required><span>×</span></div>
+        <button type="submit" class="primary">保存到此站点</button>
+      </form>
+      <button id="follow-global" class="text-button" type="button">恢复跟随全局倍速</button>
+    </section>
+    <section class="global-section">
+      <div><h2>全局默认倍速</h2><p class="hint">未单独设置的站点使用此倍速</p></div>
+      <form id="global-form" class="global-form">
+        <label class="sr-only" for="global-speed">全局默认倍速</label>
+        <div class="number-wrap"><input id="global-speed" type="number" min="0.25" max="4" step="0.01" value="1" required><span>×</span></div>
+        <button type="submit" class="small-button">保存</button>
+      </form>
+    </section>
+    <details id="rules-panel">
+      <summary>站点倍速 <span id="rule-count">0</span></summary>
+      <p class="hint rules-hint">规则包含子域名，更具体的域名优先。</p>
+      <ul id="rules"></ul>
+      <form id="add-form" class="add-form">
+        <label class="sr-only" for="add-host">新站点域名</label>
+        <input id="add-host" type="text" placeholder="例如 bilibili.com" required autocomplete="off" spellcheck="false">
+        <label class="sr-only" for="add-speed">新站点倍速</label>
+        <input id="add-speed" aria-label="新站点倍速" type="number" min="0.25" max="4" step="0.01" value="1.5" required>
+        <button type="submit" class="small-button">添加</button>
+      </form>
+    </details>
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+  <footer>一次设置，之后的每个视频都生效 <span>0.25–4×</span></footer>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+/node_modules/
+/dist/
+AGENTS.md
+PROJECT_MEMORY.md
+/docs/*
+!/docs/upstream.md
+/store-assets/
+/tools/generate-store-screenshots.js
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.crx
+*.zip
