@@ -8,11 +8,14 @@
 
 ## 安装
 
-需要 Chrome / Edge 119 或更高版本。
+前往 [GitHub Releases 下载最新版](https://github.com/yuhanbo758/sanrenjz-video-speed/releases/latest)，在发布页的附件中按浏览器选择文件：
+
+- **Chrome／Edge**：选择 `sanrenjz-video-speed-<版本>.zip`，解压后按下方步骤加载。需要浏览器 119 或更高版本。
+- **360 浏览器**：选择 `sanrenjz-video-speed-<版本>-360.crx`。能否直接安装取决于浏览器版本和安装策略。
 
 1. Chrome 打开 `chrome://extensions`，Edge 打开 `edge://extensions`。
 2. 开启「开发者模式」，点击「加载已解压的扩展程序」。
-3. 选择本插件内的 **extension** 文件夹，或构建后的 **dist/unpacked** 文件夹。
+3. 选择 ZIP 解压后包含 `manifest.json` 的文件夹。从源码安装时，可选择 **extension** 或构建后的 **dist/unpacked** 文件夹。
 4. 将扩展固定到工具栏。安装前已打开的视频页面需刷新一次。
 
 可分发 ZIP：运行 `npm run build`，得到 `dist/sanrenjz-video-speed-1.0.1.zip`。ZIP 解压后再通过上述方式加载。商店是否已提交、审核或上架以对应平台状态为准，此 ZIP 不包含签名 CRX。
